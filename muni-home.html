@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+<script type='application/javascript' src='/path/to/fastclick.js'></script>
+<link href='http://fonts.googleapis.com/css?family=Oswald' rel='stylesheet' type='text/css'>
+<link href='http://fonts.googleapis.com/css?family=Permanent+Marker' rel='stylesheet' type='text/css'>
+<title>MUNI</title>
+<style>
+	.one {
+		background-color: #33334c;
+		width: 10%;
+		height: 90%;
+		position: absolute;
+		left: -200px;
+		bottom: 0;
+	box-shadow: 4px 1px 5px #888888;
+	}
+
+	#show, #hide  {
+		width: 10%;
+		position: absolute;
+		height: 100%;
+		left: 0;
+		top: 0;
+		cursor: pointer;
+		-webkit-filter: brightness(50%) opacity(60%) grayscale();
+
+	}
+
+	#show:hover, #hide:hover  {
+		-webkit-filter: brightness(100%) opacity() grayscale(0);
+	}
+
+	#hide {
+		display: none;
+	}
+
+	header {
+
+		width: 100%;
+		height: 10%;
+		position: absolute;
+		left: 0;
+		top: 0;
+		background-color: white;
+		box-shadow: 0px 10px 5px #888888;
+
+	}
+	header h1 {
+		text-align: center;
+		padding-left:5%; 
+		padding-top: -3%; 
+	}
+
+	#show img, #hide img {
+		width: 20%;
+		margin-left: 35%;
+		float: left;
+		margin-top: 18%;
+		display: block;
+	}
+
+
+	ol, ul {
+		list-style: none;
+		margin:0px; padding:0px;
+	}
+
+	li img {
+		width: 20%;
+		margin-left: 36%;
+		padding: 35% 0 35% 0;
+		float: left;
+		display: block;
+
+	}		
+	div {
+		display: inline-block;
+	}
+	#sample {
+		display: none;
+		width: 93%;
+		height: 100%;
+		text-align: center;
+	}
+	#sample li {
+				margin: 20px 0 20px 0;
+				font-family: 'Oswald', sans-serif;
+	}
+	a {
+		text-decoration: none;
+				color: white;
+	}
+	.one li img:hover {
+		-webkit-filter: brightness(80%) opacity() grayscale(0);
+	}
+		#gallery li:hover {
+		-webkit-filter: brightness(80%) opacity() grayscale(0);
+	}
+	.content {
+		position: absolute;
+		top: 10%;
+		bottom: 0;
+		overflow: hidden;
+		left: 0;
+		width: 100%;
+	}
+
+	.back{
+		width: 100%;
+		margin-left: auto;
+		margin-right: auto;
+		display: block;
+		-webkit-filter: blur(6px); -moz-filter: blur(6px); -o-filter: blur(6px); -ms-filter: blur(6px); filter: blur(6px);
+	}
+
+	h2 {
+		text-align: center;
+		color: white;
+		font-size: 60px;
+		font-family: 'Permanent Marker', cursive;
+	}
+	.title {
+		position: absolute;
+		z-index: 3;
+		left: 47%;
+		top: 25%;
+
+	}
+
+.sns {
+		position: absolute;
+		z-index: 2;
+		left: 48%;
+		top: 80%;
+
+
+	}
+	.sns img{
+			cursor: pointer;
+			border-radius: 50%;
+			background-color: white;
+			width: 30px;
+			height: 30px;
+			float: left;
+			text-align: center;
+			margin-right: 10px;
+
+			box-shadow: 3px 3px 20px #888888;
+				}
+
+				input {
+
+				}
+</style>
+
+
+
+</head>
+<body>
+
+
+	<script>
+window.addEventListener('load', function() {
+    new FastClick(document.body);
+}, false);
+$(document).ready(function(){
+    $("#show").click(function(){
+        $(".one").animate({left: 0}, 400 );
+        $("#show img").hide();
+        $("#hide").show();
+        $("#hide img").show();
+    });
+    $("#hide").click(function(){
+        $(".one").animate({left: '-200px'}, 500 );
+        $("#hide img").hide();
+        $("#hide").hide();
+        $("#show img").show();
+    });
+
+});
+
+  $(function(){
+     $("#gallery").hover(function(){
+   $("#sample",this).slideDown("fast");
+},
+function(){
+  $("#sample",this).slideUp("fast");
+});
+ });
+</script>
+<header>
+	<h1>MUNI</h1>
+	<div id="show">
+		<img src="http://drive.google.com/uc?export=view&id=0BxHR587h2CKfQWZGMm4wclhOVGs" alt="">
+	</div>
+	<div id="hide">
+		<img src="http://drive.google.com/uc?export=view&id=0BxHR587h2CKfV0dfX2I3MXNGbGM" alt="">
+	</div>
+</header>
+<div class="content">
+
+	<div class="title"><h2>muni</h2>
+		<input type="text" name="ID" value=""></div>
+<img class="back" src="http://drive.google.com/uc?export=view&id=0BxHR587h2CKfamhfck9VbVNIVnM" alt="">
+
+
+<div class="sns">
+<img src="http://drive.google.com/uc?export=view&id=0BxHR587h2CKfejVBQTV4SFo5bzg" alt="">
+<img src="http://drive.google.com/uc?export=view&id=0BxHR587h2CKfejczZ09tRnl6Y1E" alt="">
+<img src="http://drive.google.com/uc?export=view&id=0BxHR587h2CKfdFNpSDN1cGhMTk0" alt="">
+</div>
+
+</div>
+	<div class="one">
+		<ol>
+			<li>
+				<a href="base home.html"><img src="http://drive.google.com/uc?export=view&id=0BxHR587h2CKfZ19oT1JNVnhEVjQ" alt=""></a>
+			</li>
+			<li id="gallery">
+				<a href=#><img src="http://drive.google.com/uc?export=view&id=0BxHR587h2CKfVnNNUmZXU1VrWVE" alt=""></a>
+				<div id="sample">
+					<ul>
+						<li><a href="#">flower</a></li>
+						<li><a href="#">nature</a></li>
+						<li><a href="#">etc</a></li>
+					</ul>
+				</div>
+			</li>
+			<li>
+				<a href=#><img src="http://drive.google.com/uc?export=view&id=0BxHR587h2CKfTU1nOG5NaXhPcmc" alt=""></a>
+			</li>
+			<li>
+				<a href=#><img src="http://drive.google.com/uc?export=view&id=0BxHR587h2CKfekpWSjhXT0ZQazA" alt=""></a>
+			</li>
+		</ol>
+	</div>
+</body>
+</html>
