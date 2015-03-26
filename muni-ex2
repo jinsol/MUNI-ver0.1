@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>muni-test</title>
+		<link rel="stylesheet" type="text/css" href="styles/my_style.css">
+
+    <style type="text/css">
+    body {
+		font: 1em Arial;
+	}
+
+
+    #clickMe {
+    	width: 120px;
+		margin-top: 50px;
+		border:none;
+    	background-image: url("https://s-media-cache-ak0.pinimg.com/736x/23/49/71/234971542e3f8517dbb967de940e3dbf.jpg");
+    }
+    
+ #picframe {
+    	width: 120px;
+		margin-top: 50px;
+		border:none;
+    	background-image: url("https://s-media-cache-ak0.pinimg.com/736x/23/49/71/234971542e3f8517dbb967de940e3dbf.jpg");
+    }
+  #picframe > img {  
+  	width: 120px;
+		margin-top: 50px;
+	
+  }
+
+
+
+
+    </style>
+
+
+
+	</head>
+	<body>
+		<div id="clickMe">sample1</div>
+		<div id="picframe">
+			<img src="https://s-media-cache-ak0.pinimg.com/736x/23/49/71/234971542e3f8517dbb967de940e3dbf.jpg" width="120" height="50">
+		</div>
+		<script src="scripts/jquery-1.6.2.min.js"></script>
+		<script>
+			$(document).ready(function(){
+				$("#clickMe").click(function() {
+					$("img").fadeIn(1000);
+					$("#picframe").slideToggle("slow");
+				});
+			});
+		</script>
+	</body>
+</html>
