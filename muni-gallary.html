@@ -1,0 +1,254 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>MUNI</title>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+<script type='application/javascript' src='/path/to/fastclick.js'></script>
+
+<style type="text/css">
+	body {font: 1em Arial;}
+
+/* css_menu*/
+	.one {
+		background-color: #33334c;
+		width: 10%;
+		height: 90%;
+		position: absolute;
+		left: -200px;
+		bottom: 0;
+	}
+
+	#show, #hide  {
+		width: 10%;
+		position: absolute;
+		height: 100%;
+		left: 0;
+		top: 0;
+		cursor: pointer;
+		-webkit-filter: brightness(50%) opacity(60%) grayscale();
+
+	}
+
+	#show:hover, #hide:hover  {
+		-webkit-filter: brightness(100%) opacity() grayscale(0);
+	}
+	#hide {
+		display: none;
+	}
+
+	header {
+
+		width: 100%;
+		height: 10%;
+		position: absolute;
+		left: 0;
+		top: 0;
+	}
+	header h1 {
+		text-align: center;
+		padding-left:5%; 
+		padding-top: -3%; 
+	}
+
+	#show img, #hide img {
+		width: 20%;
+		margin-left: 35%;
+		float: left;
+		margin-top: 18%;
+		display: block;
+	}
+
+
+	ol {
+		list-style: none;
+		margin:0px; padding:0px;
+	}
+
+	li img {
+		width: 20%;
+		margin-left: 36%;
+		padding: 35% 0 35% 0;
+		float: left;
+		display: block;
+	}		
+	#menu > div {
+		display: inline-block;
+	}
+	#sample {
+		color: white;
+		background-color: red;
+		width: 100px;
+		height: 100px;
+		left: 120px;
+	}
+
+/* css_contents*/
+#contents{margin:50px 50px ;}
+	p{
+		color:green;
+		margin-left: 100px;
+	}
+
+		#contents > div {
+			width: 50%;
+			margin: 50px auto 0;
+		}
+
+		#contents > img {
+			display:none;
+		}
+
+    #clickMe1, #clickMe2 ,#clickMe3,#clickMe4 {
+    	width: 250px;
+		margin-top: 10px;
+		border:none;
+    }
+    
+ #clickMe1{background-image: url("https://s-media-cache-ak0.pinimg.com/736x/23/49/71/234971542e3f8517dbb967de940e3dbf.jpg");}
+ #clickMe2{background-image: url("https://s-media-cache-ak0.pinimg.com/736x/12/70/0f/12700ff6f9af505c52fe56049d55236e.jpg");}
+ #clickMe3{background-image: url("https://s-media-cache-ak0.pinimg.com/236x/63/fe/dc/63fedcb061d8371d803317196cd4bc60.jpg");}
+ #clickMe4{background-image: url("https://s-media-cache-ak0.pinimg.com/736x/96/cc/79/96cc79dd6e3742a27e61ded49db0c0e2.jpg");}
+
+ #picframe1, #picframe2 ,#picframe3,#picframe4 {
+    	width: 250px;
+		margin-top: 10px;
+		border:none;
+    }
+    
+ #picframe1{background-image: url("https://s-media-cache-ak0.pinimg.com/736x/23/49/71/234971542e3f8517dbb967de940e3dbf.jpg");}
+ #picframe2{background-image: url("https://s-media-cache-ak0.pinimg.com/736x/12/70/0f/12700ff6f9af505c52fe56049d55236e.jpg");}
+ #picframe3{background-image: url("https://s-media-cache-ak0.pinimg.com/236x/63/fe/dc/63fedcb061d8371d803317196cd4bc60.jpg");}
+ #picframe4{background-image: url("https://s-media-cache-ak0.pinimg.com/736x/96/cc/79/96cc79dd6e3742a27e61ded49db0c0e2.jpg");}
+
+
+  
+  #picframe1, #picframe2 ,#picframe3, #picframe4 > img {  
+  	width: 250px;
+	margin-top: 10px;
+	
+  }	
+</style>
+
+</head>
+
+<body>
+
+	<div id="menu">
+	<script>
+window.addEventListener('load', function() {
+    new FastClick(document.body);
+}, false);
+$(document).ready(function(){
+    $("#show").click(function(){
+        $(".one").animate({left: 0}, 400 );
+        $("#show img").hide();
+        $("#hide").show();
+        $("#hide img").show();
+    });
+    $("#hide").click(function(){
+        $(".one").animate({left: '-200px'}, 500 );
+        $("#hide img").hide();
+        $("#hide").hide();
+        $("#show img").show();
+    });
+
+});
+</script>
+<header>
+
+	<h1>MUNI</h1>
+
+<div id="show">
+		<img src="file://localhost/Users/macbookretina/Google%20%E1%84%83%E1%85%B3%E1%84%85%E1%85%A1%E1%84%8B%E1%85%B5%E1%84%87%E1%85%B3/HTML/icon_png/menubar.png">
+	</div>
+	<div id="hide">
+		<img src="file://localhost/Users/macbookretina/Google%20%E1%84%83%E1%85%B3%E1%84%85%E1%85%A1%E1%84%8B%E1%85%B5%E1%84%87%E1%85%B3/HTML/icon_png/x.png">
+	</div>
+</header>
+	<div class="one">
+
+		<ol>
+			<li><a href=#><img src="file://localhost/Users/macbookretina/Google%20%E1%84%83%E1%85%B3%E1%84%85%E1%85%A1%E1%84%8B%E1%85%B5%E1%84%87%E1%85%B3/HTML/icon_png/home.png"></a></li>
+			<li id="gallery">
+				<a href=#><img src="file:///Users/macbookretina/Google%20%E1%84%83%E1%85%B3%E1%84%85%E1%85%A1%E1%84%8B%E1%85%B5%E1%84%87%E1%85%B3/HTML/icon_png/gallery.png"></a>
+				<div id="sample">
+
+					<ul>
+						<li><a href="#">flower</a></li>
+						<li><a href="#">nature</a></li>
+						<li><a href="#">etc</a></li>
+					</ul>
+				</div>
+			</li>
+
+			<li><a href=#><img src="file://localhost/Users/macbookretina/Google%20%E1%84%83%E1%85%B3%E1%84%85%E1%85%A1%E1%84%8B%E1%85%B5%E1%84%87%E1%85%B3/HTML/icon_png/unit.png"></a></li>
+			<li><a href=#><img src="file://localhost/Users/macbookretina/Google%20%E1%84%83%E1%85%B3%E1%84%85%E1%85%A1%E1%84%8B%E1%85%B5%E1%84%87%E1%85%B3/HTML/icon_png/pattern.png"></a></li>
+</div>
+
+<div id="contents">
+
+		<div id="clickMe1">
+			<p>sample1</p></div>
+		<div id="picframe1">
+			<img src="https://s-media-cache-ak0.pinimg.com/736x/23/49/71/234971542e3f8517dbb967de940e3dbf.jpg">
+		</div>
+		<script src="scripts/jquery-1.6.2.min.js"></script>
+		<script>
+			$(document).ready(function(){
+				$("#clickMe1").click(function() {
+					$("img").fadeIn(1000);
+					$("#picframe1").slideToggle("slow");
+				});
+			});
+		</script>
+
+
+<div id="clickMe2">
+			<p>sample2</p></div>
+		<div id="picframe2">
+			<img src="https://s-media-cache-ak0.pinimg.com/736x/12/70/0f/12700ff6f9af505c52fe56049d55236e.jpg">
+		</div>
+		<script src="scripts/jquery-1.6.2.min.js"></script>
+		<script>
+			$(document).ready(function(){
+				$("#clickMe2").click(function() {
+					$("img").fadeIn(1000);
+					$("#picframe2").slideToggle("slow");
+				});
+			});
+		</script>
+
+		<div id="clickMe3">
+			<p>sample3</p></div>
+		<div id="picframe3">
+			<img src="https://s-media-cache-ak0.pinimg.com/236x/63/fe/dc/63fedcb061d8371d803317196cd4bc60.jpg">
+		</div>
+		<script src="scripts/jquery-1.6.2.min.js"></script>
+		<script>
+			$(document).ready(function(){
+				$("#clickMe3").click(function() {
+					$("img").fadeIn(1000);
+					$("#picframe3").slideToggle("slow");
+				});
+			});
+		</script>
+
+		<div id="clickMe4">
+			<p>sample4</p></div>
+		<div id="picframe4">
+			<img src="https://s-media-cache-ak0.pinimg.com/736x/96/cc/79/96cc79dd6e3742a27e61ded49db0c0e2.jpg">
+		</div>
+		<script src="scripts/jquery-1.6.2.min.js"></script>
+		<script>
+			$(document).ready(function(){
+				$("#clickMe4").click(function() {
+					$("img").fadeIn(1000);
+					$("#picframe4").slideToggle("slow");
+				});
+			});
+		</script>
+		 </div>
+
+</body>
+</html>
